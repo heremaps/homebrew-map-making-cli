@@ -39,7 +39,7 @@ The Maps CLI allows you to:
   You can upload and retrieve data to and from livemap interactive map layers.
 - [Execute HERE Map Making processes](https://www.here.com/docs/bundle/maps-user-guide-java-scala/page/topics/maps-commands.html).
   You can execute available Map Making processes like conflate, validate, rebase, and more.
-- [Export GeoParquet and GeoJson data](https://www.here.com/docs/bundle/maps-user-guide-java-scala/page/topics/maps-commands.html).
+- [Export GeoParquet and GeoJson data](https://www.here.com/docs/bundle/maps-user-guide-java-scala/page/topics/maps-commands.html#export).
   You can export `GeoParquet` and `GeoJson` data from the `livemap`.
 
 ## Prerequisites
