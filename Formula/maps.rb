@@ -1,8 +1,8 @@
 class Maps < Formula
   desc "With the Command Line Interface you can access HERE Map Making service from a command line or with scripts."
-  url "https://artifact.api.platform.here.com/v1/references/hrn:here:artifact:::com.here.platform:cli:17.2.39/maps-cli-17.2.39.tar.gz\?apiKey\=84q8N9DRx6YAqyJaXUpr9fhiTnCUIBzvHLpk3QU4Oaw"
-  sha256 "aa7c8cd331bce41f43ab83d80fc063bc88ac12d0f436cb408b768b315fa8fd12"
-  version "17.2.39"
+  url "https://artifact.api.platform.here.com/v1/references/hrn:here:artifact:::com.here.platform:cli:17.3.3/maps-cli-17.3.3.tar.gz\?apiKey\=84q8N9DRx6YAqyJaXUpr9fhiTnCUIBzvHLpk3QU4Oaw"
+  sha256 "939d9c1dcffc7b78b000b470a852a01b177ef04885f925a096f93beb0de35607"
+  version "17.3.3"
   license "Proprietary"
 
   depends_on "openjdk@17"
@@ -10,7 +10,7 @@ class Maps < Formula
   def install
     prefix.install "HERE_NOTICE"
     prefix.install "LICENSE"
-    libexec.install "cli_2.12-17.2.39.jar"
+    libexec.install "cli_2.12-17.3.3.jar"
     # There are two versions of variables: build time and runtime
     # JAVA_VERSION, ALLOW_DEEP_REFLECTION, 2 and @ needs to be preserved during build time by using $ instead of $
     (bin/"maps").write <<~EOS
@@ -21,7 +21,7 @@ class Maps < Formula
       if ! [[ "$JAVA_VERSION" =~ ^1"."+ ]]; then
         ALLOW_DEEP_REFLECTION="--add-opens java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.security.util=ALL-UNNAMED"
       fi
-      exec "${JAVA_HOME}/bin/java" ${ALLOW_DEEP_REFLECTION:-} -Dfile.encoding=UTF8 -cp "#{libexec}/cli_2.12-17.2.39.jar" "com.here.platform.cli.MapsMain" "$@"
+      exec "${JAVA_HOME}/bin/java" ${ALLOW_DEEP_REFLECTION:-} -Dfile.encoding=UTF8 -cp "#{libexec}/cli_2.12-17.3.3.jar" "com.here.platform.cli.MapsMain" "$@"
     EOS
   end
 
