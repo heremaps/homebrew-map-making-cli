@@ -1,6 +1,6 @@
 class Maps < Formula
   desc "With the Command Line Interface you can access HERE Map Making service from a command line or with scripts."
-  url "https://artifact.api.platform.here.com/v1/references/hrn:here:artifact:::com.here.platform:cli:17.5.17/maps-cli-17.5.17.tar.gz\?apiKey\=84q8N9DRx6YAqyJaXUpr9fhiTnCUIBzvHLpk3QU4Oaw"
+  url "https://github.com/heremaps/homebrew-map-making-cli/releases/download/17.5.17/maps_cli_2.12-17.5.17.tar.gz"
   sha256 "d7cc637680895b76291ff00aeb909ea231eaec7e0b1cc34245e6ea52df68c1bf"
   version "17.5.17"
   license "Proprietary"
