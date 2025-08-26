@@ -1,8 +1,8 @@
 class Maps < Formula
   desc "With the Command Line Interface you can access HERE Map Making service from a command line or with scripts."
-  url "https://github.com/heremaps/homebrew-map-making-cli/releases/download/17.5.17/maps_cli_2.12-17.5.17.tar.gz"
-  sha256 "d7cc637680895b76291ff00aeb909ea231eaec7e0b1cc34245e6ea52df68c1bf"
-  version "17.5.17"
+  url "https://github.com/heremaps/homebrew-map-making-cli/releases/download/17.5.23/maps_cli_2.12-17.5.23.tar.gz"
+  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  version "17.5.23"
   license "Proprietary"
 
   depends_on "openjdk@17"
@@ -10,7 +10,7 @@ class Maps < Formula
   def install
     prefix.install "HERE_NOTICE"
     prefix.install "LICENSE"
-    libexec.install "cli_2.12-17.5.17.jar"
+    libexec.install "cli_2.12-17.5.23.jar"
     # There are two versions of variables: build time and runtime
     # JAVA_VERSION, ALLOW_DEEP_REFLECTION, 2 and @ needs to be preserved during build time by using $ instead of $
     (bin/"maps").write <<~EOS
@@ -21,7 +21,7 @@ class Maps < Formula
       if ! [[ "$JAVA_VERSION" =~ ^1"."+ ]]; then
         ALLOW_DEEP_REFLECTION="--add-opens java.base/java.lang=ALL-UNNAMED --add-opens=java.base/sun.security.util=ALL-UNNAMED"
       fi
-      exec "${JAVA_HOME}/bin/java" ${ALLOW_DEEP_REFLECTION:-} -Dfile.encoding=UTF8 -cp "#{libexec}/cli_2.12-17.5.17.jar" "com.here.platform.cli.MapsMain" "$@"
+      exec "${JAVA_HOME}/bin/java" ${ALLOW_DEEP_REFLECTION:-} -Dfile.encoding=UTF8 -cp "#{libexec}/cli_2.12-17.5.23.jar" "com.here.platform.cli.MapsMain" "$@"
     EOS
   end
 
