@@ -1,7 +1,7 @@
 class Maps < Formula
   desc "With the Command Line Interface you can access HERE Map Making service from a command line or with scripts."
   url "https://github.com/heremaps/homebrew-map-making-cli/releases/download/17.5.23/maps_cli_2.12-17.5.23.tar.gz"
-  sha256 "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  sha256 "6f65b2ffd321094b7a366861e27ebb2df78e961c7cecefeec7c70a098e1c9b9f"
   version "17.5.23"
   license "Proprietary"
 
